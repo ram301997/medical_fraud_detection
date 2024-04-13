@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header, nav, section, footer {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+header h1 {
+    color: #333;
+}
+
+header p, footer p {
+    color: #666;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section h2 {
+    color: #333;
+}
+
+section h3 {
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+}
