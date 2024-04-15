@@ -1,0 +1,113 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font and Background Setup */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #283593; /* Deep blue color for text */
+    background-color: #E3F2FD; /* Light blue background for a fresh look */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #3949AB; /* Deeper shade of blue for header */
+    color: #ffffff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.4em;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #5C6BC0; /* Lighter blue for the navigation */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #303F9F; /* Darker blue on hover/focus for contrast */
+}
+
+/* Section Styling */
+section {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #3949AB; /* Consistent color theme with headers */
+    margin-bottom: 10px;
+}
+
+section h3 {
+    color: #5C6BC0; /* Lighter color for subheaders */
+}
+
+section p {
+    margin-bottom: 16px;
+}
+
+/* Image Styling */
+.eda-plots img {
+    width: 100%;
+    max-width: 650px; /* Slightly larger images */
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+}
+
+.eda-plots h4 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #283593; /* Matching footer with header background */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 10px;
+    position: relative;
+    bottom: 0;
+    width: calc(100% - 40px);
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
