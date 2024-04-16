@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Fraud Prediction</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Medical Fraud Prediction</h1>
-        <p>Exploring data-driven approaches to detect and prevent medical fraud.</p>
+        <h1>Medical Provider Fraud Prediction</h1>
+        
     </header>
 
     <nav>
@@ -25,38 +25,79 @@
 
     <section id="introduction">
         <h2>Introduction</h2>
-        <p>Medical fraud causes significant financial losses each year. Detecting fraudulent activities effectively can save resources and improve healthcare services.</p>
+        <p>Healthcare fraud is a major issue that costs billions of dollars each year. This problem includes fraudulent billing practices by some medical providers, leading to increased healthcare expenses and tarnishing the reputation of honest providers. Recognizing the scale and impact of this issue is crucial for maintaining trust in the healthcare system.</p>
     </section>
 
     <section id="objective">
         <h2>Objective</h2>
-        <p>The project aims to develop robust machine learning models to identify and predict fraudulent activities in medical billing.</p>
+        <p>Healthcare fraud is a major issue that costs billions of dollars each year. This problem includes fraudulent billing practices by some medical providers, leading to increased healthcare expenses and tarnishing the reputation of honest providers. Recognizing the scale and impact of this issue is crucial for maintaining trust in the healthcare system.</p>
     </section>
 
     <section id="data-overview">
         <h2>Data Overview</h2>
-        <p>We used data from the Centers for Medicare and Medicaid Services, which included inpatient and outpatient details, provider data, and beneficiary details.</p>
+        <p>The Centers for Medicare and Medicaid Services (CMS) offers key information about health services. This includes data on hospital visits (Inpatient Data), services people get without staying in the hospital (Outpatient Data), and personal details about the people who receive Medicare and Medicaid, like age and if they qualify for these programs (Beneficiary Details Data). This information helps us understand who uses these services, what kind of care they get, and how to make these programs better for everyone.</p>
     </section>
 
     <section id="methodology">
         <h2>Methodology</h2>
         <h3>Data Preparation</h3>
-        <p>Merged various datasets to create a comprehensive dataset for analysis.</p>
+        <p>Hospital admission and outpatient visit records are merged on matching elements. Beneficiary information is then aligned with this data via individual IDs. In the final step, healthcare provider details are incorporated using provider IDs, creating a comprehensive dataset for insights.</p>
+        <p>
+            <h4>Figure 1: Data Preperation</h4>
+        <img src="images/data_preperation.jpg" alt="Data Preperation">
+         </P>
+          
         <h3>Data Preprocessing</h3>
-        <p>Features were normalized and encoded to prepare for machine learning models.</p>
+        <p>
+In data preprocessing, patient ages are calculated from birthdates, and claim times plus hospital stays are analyzed for trends. Data is then normalized, relevant features selected for better model accuracy, and categories are turned into numbers.</p>
+
         <h3>Exploratory Data Analysis</h3>
          <div class="eda-plots">
-        <h4>Plot 1: Distribution of Claim Amounts</h4>
-        <img src="images/plot1.png" alt="Distribution of Claim Amounts">
-        <p>This plot shows the distribution of claim amounts, highlighting potential outliers and patterns of fraudulent claims.</p>
-        
-        <h4>Plot 2: Correlation Heatmap</h4>
-        <img src="images/plot2.png" alt="Correlation Heatmap">
-        <p>The correlation heatmap helps identify relationships between different variables, which are crucial in predicting fraudulent activities.</p>
+           
+<h4>Figure 2:Top-10 Procedures and Diagnosis codes Involved in Healthcare Fraud</h4>
+<div style="display: flex; justify-content: space-around;">
+    <div>
+        <img src="images/eda1-1.png" alt="Top 10 Medical Procedures">
     </div>
-        <p>We discovered key patterns and anomalies in the data that could indicate fraudulent activities.</p>
+    <div>
+        <img src="images/eda1-2.png" alt="Top 10 Medical Diagnosis">
+    </div>
+</div>
+      <p>Bar chart showing top 10 medical procedures and diagnosis code with their counts and potential fraud indicators.</p>
+      
+      <h4>Figure 3:Physicians and chronic conditions Imapct in Healthcare Fraud</h4>
+<div style="display: flex; justify-content: space-around;">
+    <div>
+        <img src="images/eda2-1.png" alt="Top 20 Providers">
+    </div>
+    <div>
+        <img src="images/eda2-2.png" alt="Chronic Conditions impact">
+    </div>
+</div>
+      <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
+      
+       <h4>Figure 4:Analysis of Hospital Stay Duration and Claim Costs in Relation to Healthcare Fraud Indicators</h4>
+<div style="display: flex; justify-content: space-around;">
+    <div>
+        <img src="images/eda3.png" alt="duration imapct on fraud">
+    </div>
+    <div>
+        <img src="images/eda4.png" alt="claims cost impact on fraud">
+    </div>
+</div>
+      <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
+      
+      <h4>Figure 5: Top 20 Predictive Features for Healthcare Fraud Detection in Claims Data</h4>
+<div style="display: flex; justify-content: space-around;">
+    <div>
+        <img src="images/feature_importance.png" alt="feature importance on fraud">
+    </div>
+    
+</div>
+      <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
+    
         <h3>Model Building</h3>
-        <p>We implemented several models, including Logistic Regression, Decision Trees, and a Convolutional Neural Network.</p>
+        <p>We implemented several models, including Logistic Regression, Decision Trees,Random Forest,CNN,LSTM+AE,RNN.</p>
     </section>
 
     <section id="results">
