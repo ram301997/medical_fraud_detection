@@ -85,7 +85,7 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
         <img src="images/eda4.png" alt="claims cost impact on fraud">
     </div>
 </div>
-      <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
+      <p>Scatter plot correlates longer hospital stays with higher claim periods, marked for potential fraud. Bar chart shows most claims are low-cost, with some flagged as fraudulent across cost ranges..</p>
       
       <h4>Figure 5: Top 20 Predictive Features for Healthcare Fraud Detection in Claims Data</h4>
 <div style="display: flex; justify-content: space-around;">
@@ -94,7 +94,7 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
     </div>
     
 </div>
-      <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
+      <p>Diagnosis codes and reimbursement amounts are key predictors of fraud in healthcare claims.</p>
     
         <h3>Model Building</h3>
         <p>We implemented several models, including Logistic Regression, Decision Trees,Random Forest,CNN,LSTM+AE,RNN.</p>
@@ -102,12 +102,137 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
 
     <section id="results">
         <h2>Results</h2>
-        <p>The Decision Tree model achieved the best performance with an accuracy of 82.92%.</p>
+      <h3>Machnie learning Models</h3>
+       <p>
+            <h4>Figure 6:Comparative Performance Analysis of Machine Learning Models for Fraud Detection</h4>
+         
+        <img src="images/ml_auc.png" alt="ML models comparision">
+          </p>
+         
+        <p>The Decision Tree (DT) model outperforms others, showing higher Area Under Curve (AUC) scores in both training and testing.</p>
+         </P>
+      
+      <h3>Deep learning Models</h3>
+       <p>
+            <h4>Figure 7:Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
+         
+        <img src="images/dl_graph.png" alt="ML models comparision">
+          </p>
+         
+        <p>LSTM and LSTM with Autoencoder show similar stability in accuracy, while CNN and RNN models display consistent validation performance.</p>
+         </P>
+      
+       <h3>Results Comparision</h3>
+      <p></p>
+<title>Results Comparison</title>
+<style>
+    .table-container {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .accuracy {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="table-container">
+    <h3>ML Models Accuracy</h3>
+    <table>
+        <tr>
+            <th>ML Models</th>
+            <th class="accuracy">Accuracy</th>
+        </tr>
+        <tr>
+            <td>Logistic Regression</td>
+            <td class="accuracy">0.704</td>
+        </tr>
+        <tr>
+            <td>Decision Tree</td>
+            <td class="accuracy">0.829</td>
+        </tr>
+        <tr>
+            <td>Support Vector Classifier</td>
+            <td class="accuracy">0.703</td>
+        </tr>
+        <tr>
+            <td>Naive Bayes</td>
+            <td class="accuracy">0.629</td>
+        </tr>
+        <tr>
+            <td>Random Forest</td>
+            <td class="accuracy">0.811</td>
+        </tr>
+    </table>
+</div>
+
+<div class="table-container">
+    <h3>DL Models Accuracy</h3>
+    <table>
+        <tr>
+            <th>DL Models</th>
+            <th class="accuracy">Accuracy</th>
+        </tr>
+        <tr>
+            <td>LSTM</td>
+            <td class="accuracy">0.629</td>
+        </tr>
+        <tr>
+            <td>LSTM+AE</td>
+            <td class="accuracy">0.666</td>
+        </tr>
+        <tr>
+            <td>CNN</td>
+            <td class="accuracy">0.631</td>
+        </tr>
+        <tr>
+            <td>RNN</td>
+            <td class="accuracy">0.620</td>
+        </tr>
+    </table>
+</div>
+
+
+   <p> </p>
+         
+       
+         </P>
+      
+        <p>Decision Tree outperforms all models with Random Forest following, while LSTM-based models lead in deep learning category</p>
     </section>
 
     <section id="conclusion">
         <h2>Conclusion and Future Work</h2>
-        <p>Future efforts will focus on integrating more data sources and improving model accuracy using advanced machine learning techniques.</p>
+       <h3>Conclusion</h3>
+      <p>1.Identified different types of fraud from data analysis.</p>
+       <p>2.Decision Tree, Random Forest models show superior performance, high accuracy.</p>
+      <p>3.DL models, with LSTM+AE, show promise in complex fraud pattern recognition.</p>
+<p>4.Reimbursements are key indicators of potential fraud. Diagnosis codes strongly correlate with fraudulent activities.</p>
+</p>
+        <h3>Future Work</h3>
+      <p>1.Collaborate with healthcare professionals to uncover new fraud typologies.
+</p>
+       <p>2.Experiment with various data encoding methods to boost model precision.</p>
+      <p>3.Enrich datasets with comprehensive profiles of healthcare providers.</p>
+<p>4.Build instant fraud alert systems for healthcare transaction monitoring.</p>
+ <p>5.Train models to differentiate between fraud and legitimate billing anomalies.
+</p>
+</p>
+  
     </section>
 
     <footer>
