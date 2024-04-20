@@ -44,7 +44,7 @@
         <p>Hospital admission and outpatient visit records are merged on matching elements. Beneficiary information is then aligned with this data via individual IDs. In the final step, healthcare provider details are incorporated using provider IDs, creating a comprehensive dataset for insights.</p>
         <p>
             <h4>Figure 1: Data Preperation</h4>
-        <img src="images/data_preperartion.png" alt="Data Preperation">
+        <img src="images/data_preperartion.jpg" alt="Data Preperation">
          </P>
           
         <h3>Data Preprocessing</h3>
@@ -104,9 +104,35 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
         <h2>Results</h2>
       <h3>Machnie learning Models</h3>
        <p>
-            <h4>Figure 6:Comparative Performance Analysis of Machine Learning Models for Fraud Detection</h4>
-         
-        <img src="images/ml_auc.png" alt="ML models comparison" class="responsive-image">
+            <h4>Figure 6: Comparative Performance Analysis of Machine Learning Models for Fraud Detection</h4>
+<div style="display: flex; flex-direction: column; align-items: center;">
+    
+    <!-- Top two plots -->
+    <div style="display: flex; justify-content: space-around; width: 100%;">
+        <div>
+            <p>LR (Logistic Regression)</p>
+            <img src="images/auc_lr.png" alt="AUC for LR">
+        </div>
+        <div>
+            <p>SVC (Support Vector Classifier)</p>
+            <img src="images/auc_svc.png" alt="AUC for SVC">
+        </div>
+    </div>
+    
+    <!-- Bottom two plots -->
+    <div style="display: flex; justify-content: space-around; width: 100%;">
+        <div>
+            <p>DT (Decision Tree)</p>
+            <img src="images/auc_dt.png" alt="AUC for DT">
+        </div>
+        <div>
+            <p>NB (Naive Bayes)</p>
+            <img src="images/auc_nb.png" alt="AUC for NB">
+        </div>
+    </div>
+    
+</div>
+
           </p>
          
         <p>The Decision Tree (DT) model outperforms others, showing higher Area Under Curve (AUC) scores in both training and testing.</p>
@@ -114,9 +140,35 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
       
       <h3>Deep learning Models</h3>
        <p>
-            <h4>Figure 7:Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
-         
-      <img src="images/dl_graph.png" alt="DL models comparison" class="responsive-image">
+     <h4>Figure 7:Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
+<div style="display: flex; flex-direction: column; align-items: center;">
+    
+    <!-- Top two plots -->
+    <div style="display: flex; justify-content: space-around; width: 100%;">
+        <div>
+            <p>LSTM(Long Short Term Memory)</p>
+            <img src="images/lstm_plot.png" alt="AUC for LSTM">
+        </div>
+        <div>
+            <p>LSTM+AE (Long Short Term Memory+AutoEncoder)</p>
+            <img src="images/lstm+ae_plot.png" alt="LSTM+AE">
+        </div>
+    </div>
+    
+    <!-- Bottom two plots -->
+    <div style="display: flex; justify-content: space-around; width: 100%;">
+        <div>
+            <p>CNN (Convolutional Neural Network )</p>
+            <img src="images/cnn_plot.png" alt="CNN">
+        </div>
+        <div>
+            <p>RNN (Recurrent Neural Network)</p>
+            <img src="images/auc_nb.png" alt="RNN">
+        </div>
+    </div>
+    
+</div>
+
           </p>
          
         <p>LSTM and LSTM with Autoencoder show similar stability in accuracy, while CNN and RNN models display consistent validation performance.</p>
@@ -159,23 +211,23 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
         </tr>
         <tr>
             <td>Logistic Regression</td>
-            <td class="accuracy">0.704</td>
+            <td class="accuracy">0.728</td>
         </tr>
         <tr>
             <td>Decision Tree</td>
-            <td class="accuracy">0.829</td>
+            <td class="accuracy">0.726</td>
         </tr>
         <tr>
             <td>Support Vector Classifier</td>
-            <td class="accuracy">0.703</td>
+            <td class="accuracy">0.729</td>
         </tr>
         <tr>
             <td>Naive Bayes</td>
-            <td class="accuracy">0.629</td>
+            <td class="accuracy">0.406</td>
         </tr>
         <tr>
             <td>Random Forest</td>
-            <td class="accuracy">0.811</td>
+            <td class="accuracy">0.742</td>
         </tr>
     </table>
 </div>
@@ -189,19 +241,19 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
         </tr>
         <tr>
             <td>LSTM</td>
-            <td class="accuracy">0.629</td>
+            <td class="accuracy">0.601</td>
         </tr>
         <tr>
             <td>LSTM+AE</td>
-            <td class="accuracy">0.666</td>
+            <td class="accuracy">0.619</td>
         </tr>
         <tr>
             <td>CNN</td>
-            <td class="accuracy">0.631</td>
+            <td class="accuracy">0.570</td>
         </tr>
         <tr>
             <td>RNN</td>
-            <td class="accuracy">0.620</td>
+            <td class="accuracy">0.409</td>
         </tr>
     </table>
 </div>
@@ -212,14 +264,14 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
        
          </P>
       
-        <p>Decision Tree outperforms all models with Random Forest following, while LSTM-based models lead in deep learning category</p>
+        <p>Random Forest outperforms all models, while LSTM+AE-based models lead in deep learning category</p>
     </section>
 
     <section id="conclusion">
         <h2>Conclusion and Future Work</h2>
        <h3>Conclusion</h3>
       <p>1.Identified different types of fraud from data analysis.</p>
-       <p>2.Decision Tree, Random Forest models show superior performance, high accuracy.</p>
+       <p>2.Random Forest models show superior performance, high accuracy.</p>
       <p>3.DL models, with LSTM+AE, show promise in complex fraud pattern recognition.</p>
 <p>4.Reimbursements are key indicators of potential fraud. Diagnosis codes strongly correlate with fraudulent activities.</p>
 </p>
