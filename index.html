@@ -44,7 +44,7 @@
         <p>Hospital admission and outpatient visit records are merged on matching elements. Beneficiary information is then aligned with this data via individual IDs. In the final step, healthcare provider details are incorporated using provider IDs, creating a comprehensive dataset for insights.</p>
         <p>
             <h4>Figure 1: Data Preperation</h4>
-        <img src="images/data_preperartion.jpg" alt="Data Preperation">
+        <img src="images/data_preperartion.png" alt="Data Preperation">
          </P>
           
         <h3>Data Preprocessing</h3>
@@ -140,34 +140,35 @@ In data preprocessing, patient ages are calculated from birthdates, and claim ti
       
       <h3>Deep learning Models</h3>
        <p>
-     <h4>Figure 7:Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
+<h4>Figure 7: Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
 <div style="display: flex; flex-direction: column; align-items: center;">
-    
+
     <!-- Top two plots -->
     <div style="display: flex; justify-content: space-around; width: 100%;">
-        <div>
-            <p>LSTM(Long Short Term Memory)</p>
-            <img src="images/lstm_plot.png" alt="AUC for LSTM">
+        <div style="max-width: 45%;">
+            <p>LSTM (Long Short Term Memory)</p>
+            <img src="images/lstm_plot.png" alt="AUC for LSTM" style="width: 100%; height: auto;">
         </div>
-        <div>
+        <div style="max-width: 45%;">
             <p>LSTM+AE (Long Short Term Memory+AutoEncoder)</p>
-            <img src="images/lstm+ae.png" alt="LSTM+AE">
+            <img src="images/lstm+ae.png" alt="LSTM+AE" style="width: 100%; height: auto;">
         </div>
     </div>
     
     <!-- Bottom two plots -->
     <div style="display: flex; justify-content: space-around; width: 100%;">
-        <div>
-            <p>CNN (Convolutional Neural Network )</p>
-            <img src="images/cnn_plot.png" alt="CNN">
+        <div style="max-width: 45%;">
+            <p>CNN (Convolutional Neural Network)</p>
+            <img src="images/cnn_plot.png" alt="CNN" style="width: 100%; height: auto;">
         </div>
-        <div>
+        <div style="max-width: 45%;">
             <p>RNN (Recurrent Neural Network)</p>
-            <img src="images/rnn_plot.png" alt="RNN">
+            <img src="images/rnn_plot.png" alt="RNN" style="width: 100%; height: auto;">
         </div>
     </div>
-    
+
 </div>
+
 
           </p>
          
