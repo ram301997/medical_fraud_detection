@@ -21,7 +21,7 @@ The approach includes:
 - **Model Building**: Implementing and evaluating several machine learning and deep learning models such as Logistic Regression, Decision Trees, Random Forest, CNN, LSTM+AE, and RNN.
 
 ## Results
-The models' performance was assessed using Area Under Curve (AUC) scores, with the Decision Tree model showing the most promise. Deep learning models, particularly LSTM with AutoEncoder, demonstrated potential in recognizing complex fraud patterns.
+The models' performance was assessed using Area Under Curve (AUC) scores, with the Random Forest model showing the most promise. Deep learning models, particularly LSTM with AutoEncoder, demonstrated potential in recognizing complex fraud patterns.
 
 ## Conclusion and Future Work
 Findings suggest that reimbursements and diagnosis codes are strong indicators of potential fraud. Future work will involve collaboration with healthcare professionals to identify new types of fraud, experimenting with data encoding methods, enriching datasets, developing instant fraud alert systems, and training models to distinguish between fraud and legitimate billing anomalies.
