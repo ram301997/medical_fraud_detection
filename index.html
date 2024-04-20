@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Fraud Prediction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Medical Provider Fraud Prediction</h1>
-        
+
     </header>
 
     <nav>
@@ -43,253 +45,274 @@
         <h3>Data Preparation</h3>
         <p>Hospital admission and outpatient visit records are merged on matching elements. Beneficiary information is then aligned with this data via individual IDs. In the final step, healthcare provider details are incorporated using provider IDs, creating a comprehensive dataset for insights.</p>
         <p>
-            <h4>Figure 1: Data Preperation</h4>
+        <h4>Figure 1: Data Preperation</h4>
         <img src="images/data_preperartion.png" alt="Data Preperation">
-         </P>
-          
+        </P>
+
         <h3>Data Preprocessing</h3>
         <p>
-In data preprocessing, patient ages are calculated from birthdates, and claim times plus hospital stays are analyzed for trends. Data is then normalized, relevant features selected for better model accuracy, and categories are turned into numbers.</p>
+            In data preprocessing, patient ages are calculated from birthdates, and claim times plus hospital stays are analyzed for trends. Data is then normalized, relevant features selected for better model accuracy, and categories are turned into numbers.</p>
 
         <h3>Exploratory Data Analysis</h3>
-         <div class="eda-plots">
-           
-<h4>Figure 2:Top-10 Procedures and Diagnosis codes Involved in Healthcare Fraud</h4>
-<div style="display: flex; justify-content: space-around;">
-    <div>
-        <img src="images/eda1-1.png" alt="Top 10 Medical Procedures">
-    </div>
-    <div>
-        <img src="images/eda1-2.png" alt="Top 10 Medical Diagnosis">
-    </div>
-</div>
-      <p>Bar chart showing top 10 medical procedures and diagnosis code with their counts and potential fraud indicators.</p>
-      
-      <h4>Figure 3:Physicians and chronic conditions Imapct in Healthcare Fraud</h4>
-<div style="display: flex; justify-content: space-around;">
-    <div>
-        <img src="images/eda2-1.png" alt="Top 20 Providers">
-    </div>
-    <div>
-        <img src="images/eda2-2.png" alt="Chronic Conditions impact">
-    </div>
-</div>
-      <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
-      
-       <h4>Figure 4:Analysis of Hospital Stay Duration and Claim Costs in Relation to Healthcare Fraud Indicators</h4>
-<div style="display: flex; justify-content: space-around;">
-    <div>
-        <img src="images/eda3.png" alt="duration imapct on fraud">
-    </div>
-    <div>
-        <img src="images/eda4.png" alt="claims cost impact on fraud">
-    </div>
-</div>
-      <p>Scatter plot correlates longer hospital stays with higher claim periods, marked for potential fraud. Bar chart shows most claims are low-cost, with some flagged as fraudulent across cost ranges..</p>
-      
-      <h4>Figure 5: Top 20 Predictive Features for Healthcare Fraud Detection in Claims Data</h4>
-<div style="display: flex; justify-content: space-around;">
-    <div>
-        <img src="images/feature_importance.png" alt="feature importance on fraud">
-    </div>
-    
-</div>
-      <p>Diagnosis codes and reimbursement amounts are key predictors of fraud in healthcare claims.</p>
-    
-        <h3>Model Building</h3>
-        <p>We implemented several models, including Logistic Regression, Decision Trees,Random Forest,CNN,LSTM+AE,RNN.</p>
+        <div class="eda-plots">
+
+            <h4>Figure 2:Top-10 Procedures and Diagnosis codes Involved in Healthcare Fraud</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/eda1-1.png" alt="Top 10 Medical Procedures">
+                </div>
+                <div>
+                    <img src="images/eda1-2.png" alt="Top 10 Medical Diagnosis">
+                </div>
+            </div>
+            <p>Bar chart showing top 10 medical procedures and diagnosis code with their counts and potential fraud indicators.</p>
+
+            <h4>Figure 3:Physicians and chronic conditions Imapct in Healthcare Fraud</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/eda2-1.png" alt="Top 20 Providers">
+                </div>
+                <div>
+                    <img src="images/eda2-2.png" alt="Chronic Conditions impact">
+                </div>
+            </div>
+            <p>Bar chart and pie chart display potential healthcare fraud by provider and the link between chronic conditions and fraud cases.</p>
+
+            <h4>Figure 4:Analysis of Hospital Stay Duration and Claim Costs in Relation to Healthcare Fraud Indicators</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/eda3.png" alt="duration imapct on fraud">
+                </div>
+                <div>
+                    <img src="images/eda4.png" alt="claims cost impact on fraud">
+                </div>
+            </div>
+            <p>Scatter plot correlates longer hospital stays with higher claim periods, marked for potential fraud. Bar chart shows most claims are low-cost, with some flagged as fraudulent across cost ranges..</p>
+
+            <h4>Figure 5: Top 20 Predictive Features for Healthcare Fraud Detection in Claims Data</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/feature_importance.png" alt="feature importance on fraud">
+                </div>
+
+            </div>
+            <p>Diagnosis codes and reimbursement amounts are key predictors of fraud in healthcare claims.</p>
+
+            <h3>Model Building</h3>
+            <p>We implemented several models, including Logistic Regression, Decision Trees,Random Forest,CNN,LSTM+AE,RNN.</p>
     </section>
 
     <section id="results">
         <h2>Results</h2>
-      <h3>Machnie learning Models</h3>
-       <p>
-            <h4>Figure 6: Comparative Performance Analysis of Machine Learning Models for Fraud Detection</h4>
-<div style="display: flex; flex-direction: column; align-items: center;">
-    
-    <!-- Top two plots -->
-    <div style="display: flex; justify-content: space-around; width: 100%;">
-        <div>
-            <p>LR (Logistic Regression)</p>
-            <img src="images/auc_lr.png" alt="AUC for LR">
-        </div>
-        <div>
-            <p>SVC (Support Vector Classifier)</p>
-            <img src="images/auc_svm.png" alt="AUC for SVC">
-        </div>
-    </div>
-    
-    <!-- Bottom two plots -->
-    <div style="display: flex; justify-content: space-around; width: 100%;">
-        <div>
-            <p>DT (Decision Tree)</p>
-            <img src="images/auc_dt.png" alt="AUC for DT">
-        </div>
-        <div>
-            <p>NB (Naive Bayes)</p>
-            <img src="images/auc_nb.png" alt="AUC for NB">
-        </div>
-    </div>
-    
-</div>
+        <h3>Machnie learning Models</h3>
+        <p>
+        <h4>Figure 6: Comparative Performance Analysis of Machine Learning Models for Fraud Detection</h4>
+        <div style="display: flex; flex-direction: column; align-items: center;">
 
-          </p>
-         
+            <!-- Top two plots -->
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div>
+                    <p>LR (Logistic Regression)</p>
+                    <img src="images/auc_lr.png" alt="AUC for LR">
+                </div>
+                <div>
+                    <p>SVC (Support Vector Classifier)</p>
+                    <img src="images/auc_svm.png" alt="AUC for SVC">
+                </div>
+            </div>
+
+            <!-- Bottom two plots -->
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div>
+                    <p>DT (Decision Tree)</p>
+                    <img src="images/auc_dt.png" alt="AUC for DT">
+                </div>
+                <div>
+                    <p>NB (Naive Bayes)</p>
+                    <img src="images/auc_nb.png" alt="AUC for NB">
+                </div>
+            </div>
+
+        </div>
+
+        </p>
+
         <p>The Decision Tree (DT) model outperforms others, showing higher Area Under Curve (AUC) scores in both training and testing.</p>
-         </P>
-      
-      <h3>Deep learning Models</h3>
-       <p>
-<h4>Figure 7: Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
-<div style="display: flex; flex-direction: column; align-items: center;">
+        </P>
 
-    <!-- Top two plots -->
-    <div style="display: flex; justify-content: space-around; width: 100%;">
-        <div style="max-width: 45%;">
-            <p>LSTM (Long Short Term Memory)</p>
-            <img src="images/lstm_plot.png" alt="AUC for LSTM" style="width: 100%; height: auto;">
-        </div>
-        <div style="max-width: 45%;">
-            <p>LSTM+AE (Long Short Term Memory+AutoEncoder)</p>
-            <img src="images/lstm+ae.png" alt="LSTM+AE" style="width: 100%; height: auto;">
-        </div>
-    </div>
-    
-    <!-- Bottom two plots -->
-    <div style="display: flex; justify-content: space-around; width: 100%;">
-        <div style="max-width: 45%;">
-            <p>CNN (Convolutional Neural Network)</p>
-            <img src="images/cnn_plot.png" alt="CNN" style="width: 100%; height: auto;">
-        </div>
-        <div style="max-width: 45%;">
-            <p>RNN (Recurrent Neural Network)</p>
-            <img src="images/rnn_plot.png" alt="RNN" style="width: 100%; height: auto;">
-        </div>
-    </div>
+        <h3>Deep learning Models</h3>
+        <p>
+        <h4>Figure 7: Performance Comparison of Deep Learning Models on Training and Validation Sets</h4>
+        <div style="display: flex; flex-direction: column; align-items: center;">
 
-</div>
+            <!-- Top two plots -->
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div style="max-width: 45%;">
+                    <p>LSTM (Long Short Term Memory)</p>
+                    <img src="images/lstm_plot.png" alt="AUC for LSTM" style="width: 100%; height: auto;">
+                </div>
+                <div style="max-width: 45%;">
+                    <p>LSTM+AE (Long Short Term Memory+AutoEncoder)</p>
+                    <img src="images/lstm+ae.png" alt="LSTM+AE" style="width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <!-- Bottom two plots -->
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div style="max-width: 45%;">
+                    <p>CNN (Convolutional Neural Network)</p>
+                    <img src="images/cnn_plot.png" alt="CNN" style="width: 100%; height: auto;">
+                </div>
+                <div style="max-width: 45%;">
+                    <p>RNN (Recurrent Neural Network)</p>
+                    <img src="images/rnn_plot.png" alt="RNN" style="width: 100%; height: auto;">
+                </div>
+            </div>
+
+        </div>
 
 
-          </p>
-         
+        </p>
+
         <p>LSTM and LSTM with Autoencoder show similar stability in accuracy, while CNN and RNN models display consistent validation performance.</p>
-         </P>
-      
-       <h3>Results Comparision</h3>
-      <p></p>
-<title>Results Comparison</title>
-<style>
-    .table-container {
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 20px;
-    }
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th, td {
-        padding: 5px;
-        text-align: left;
-    }
-    th {
-        background-color: #4CAF50;
-        color: white;
-    }
-    .accuracy {
-        text-align: center;
-    }
-</style>
-</head>
-<body>
+        </P>
 
-<div class="table-container">
-    <h3>ML Models Accuracy</h3>
-    <table>
-        <tr>
-            <th>ML Models</th>
-            <th class="accuracy">Accuracy</th>
-        </tr>
-        <tr>
-            <td>Logistic Regression</td>
-            <td class="accuracy">0.728</td>
-        </tr>
-        <tr>
-            <td>Decision Tree</td>
-            <td class="accuracy">0.726</td>
-        </tr>
-        <tr>
-            <td>Support Vector Classifier</td>
-            <td class="accuracy">0.729</td>
-        </tr>
-        <tr>
-            <td>Naive Bayes</td>
-            <td class="accuracy">0.406</td>
-        </tr>
-        <tr>
-            <td>Random Forest</td>
-            <td class="accuracy">0.742</td>
-        </tr>
-    </table>
-</div>
+        <h3>Results Comparision</h3>
+        <p></p>
+        <title>Results Comparison</title>
+        <style>
+            .table-container {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 20px;
+            }
 
-<div class="table-container">
-    <h3>DL Models Accuracy</h3>
-    <table>
-        <tr>
-            <th>DL Models</th>
-            <th class="accuracy">Accuracy</th>
-        </tr>
-        <tr>
-            <td>LSTM</td>
-            <td class="accuracy">0.601</td>
-        </tr>
-        <tr>
-            <td>LSTM+AE</td>
-            <td class="accuracy">0.619</td>
-        </tr>
-        <tr>
-            <td>CNN</td>
-            <td class="accuracy">0.570</td>
-        </tr>
-        <tr>
-            <td>RNN</td>
-            <td class="accuracy">0.409</td>
-        </tr>
-    </table>
-</div>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding: 5px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .accuracy {
+                text-align: center;
+            }
+        </style>
+        </head>
+
+        <body>
+
+            <div class="table-container">
+                <h3>ML Models Accuracy</h3>
+                <table>
+                    <tr>
+                        <th>ML Models</th>
+                        <th class="accuracy">Accuracy</th>
+                    </tr>
+                    <tr>
+                        <td>Logistic Regression</td>
+                        <td class="accuracy">0.728</td>
+                    </tr>
+                    <tr>
+                        <td>Decision Tree</td>
+                        <td class="accuracy">0.726</td>
+                    </tr>
+                    <tr>
+                        <td>Support Vector Classifier</td>
+                        <td class="accuracy">0.729</td>
+                    </tr>
+                    <tr>
+                        <td>Naive Bayes</td>
+                        <td class="accuracy">0.406</td>
+                    </tr>
+                    <tr>
+                        <td>Random Forest</td>
+                        <td class="accuracy">0.742</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>DL Models Accuracy</h3>
+                <table>
+                    <tr>
+                        <th>DL Models</th>
+                        <th class="accuracy">Accuracy</th>
+                    </tr>
+                    <tr>
+                        <td>LSTM</td>
+                        <td class="accuracy">0.601</td>
+                    </tr>
+                    <tr>
+                        <td>LSTM+AE</td>
+                        <td class="accuracy">0.619</td>
+                    </tr>
+                    <tr>
+                        <td>CNN</td>
+                        <td class="accuracy">0.570</td>
+                    </tr>
+                    <tr>
+                        <td>RNN</td>
+                        <td class="accuracy">0.409</td>
+                    </tr>
+                </table>
+            </div>
 
 
-   <p> </p>
-         
-       
-         </P>
-      
-        <p>Random Forest outperforms all models, while LSTM+AE-based models lead in deep learning category</p>
+            <p> </p>
+
+
+            </P>
+
+            <p>Random Forest outperforms all models, while LSTM+AE-based models lead in deep learning category</p>
     </section>
 
     <section id="conclusion">
         <h2>Conclusion and Future Work</h2>
-       <h3>Conclusion</h3>
-      <p>1.Identified different types of fraud from data analysis.</p>
-       <p>2.Random Forest models show superior performance, high accuracy.</p>
-      <p>3.DL models, with LSTM+AE, show promise in complex fraud pattern recognition.</p>
-<p>4.Reimbursements are key indicators of potential fraud. Diagnosis codes strongly correlate with fraudulent activities.</p>
-</p>
+        <h3>Conclusion</h3>
+        <p>1.Identified different types of fraud from data analysis.</p>
+        <p>2.Random Forest models show superior performance, high accuracy.</p>
+        <p>3.DL models, with LSTM+AE, show promise in complex fraud pattern recognition.</p>
+        <p>4.Reimbursements are key indicators of potential fraud. Diagnosis codes strongly correlate with fraudulent activities.</p>
+        </p>
         <h3>Future Work</h3>
-      <p>1.Collaborate with healthcare professionals to uncover new fraud typologies.
-</p>
-       <p>2.Experiment with various data encoding methods to boost model precision.</p>
-      <p>3.Enrich datasets with comprehensive profiles of healthcare providers.</p>
-<p>4.Build instant fraud alert systems for healthcare transaction monitoring.</p>
- <p>5.Train models to differentiate between fraud and legitimate billing anomalies.
-</p>
-</p>
-  
+        <p>1.Collaborate with healthcare professionals to uncover new fraud typologies.
+        </p>
+        <p>2.Experiment with various data encoding methods to boost model precision.</p>
+        <p>3.Enrich datasets with comprehensive profiles of healthcare providers.</p>
+        <p>4.Build instant fraud alert systems for healthcare transaction monitoring.</p>
+        <p>5.Train models to differentiate between fraud and legitimate billing anomalies.
+        </p>
+        </p>
+
     </section>
 
     <footer>
         <p>© 2024 Medical Fraud Detection Project Team</p>
+        <p>Contributors:</p>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/leela-sai-rushendra-varma-mudunuri">Leela Sai Rushendra Varma Mudunuri</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/ramachandra-reddy-16babb159/">Ramachandra Reddy Kolakalapudi</a>
+            </li>
+        </ul>
+        <p>Code available on GitHub:</p>
+        <a href="https://github.com/ram301997/medical_fraud_detection">Project GitHub Repository</a>
     </footer>
+
 </body>
+
 </html>
